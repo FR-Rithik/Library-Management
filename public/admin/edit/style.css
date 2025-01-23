@@ -1,0 +1,115 @@
+
+/* Form Group Styling */
+.form-container {
+    width: 50%; /* Adjust width as needed */
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: -4px 0 6px rgba(0,0,0,0.1);
+    overflow-y: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    height: 20px;
+}
+
+/* Flex container for buttons */
+.btn {
+    width: 100%; /* Full width of the container */
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: space-between; /* Add even space between buttons */
+    align-items: center; /* Align buttons vertically */
+    gap: 10px; /* Add spacing between the buttons */
+  }
+  
+  /* Button styling */
+  .update, .delete, .back {
+    width: calc(25% - 5px); /* Equal width for buttons, considering the gap */
+    height: 2rem; /* Fixed height for buttons */
+    background-color: #007bff; /* Default blue background for buttons */
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  /* Specific styles for Update button */
+  .update {
+    background-color: #007bff; /* Blue color for update */
+  }
+  
+  .update:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+
+  /* style for back button */
+  .back{
+    background-color: rgb(130, 152, 172);
+  }
+  .back:hover{
+    background-color: #555;
+  }
+  
+  /* Specific styles for Delete button */
+  .delete {
+    background-color: #e30d0d; /* Red color for delete */
+  }
+  
+  .delete:hover {
+    background-color: #b30000; /* Darker red on hover */
+  }
+   
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tableAndForm {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .book-list,
+    .form-container {
+        width: 500%;
+        height: auto;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+}

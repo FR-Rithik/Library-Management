@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Header Section -->
+  <header>
+    <h3>RUET Online Library</h3>
+    <nav>
+      <a href="/" style="color: aliceblue;">Log Out</a>
+      <button class="profileButton" id="profileButton">Profile</button>
+    </nav>
+    <div class="auth-buttons">
+      <p id="user-name"></p> <!-- Changed ID to follow consistent casing -->
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <div class="tableAndForm">
+      
+      <!-- Borrowed Books Table -->
+      <div class="book-list">
+        <div class="tableHeader" id="tableHeader">
+          <h2>Borrowed Books</h2>
+          <!-- Uncomment if search functionality is implemented -->
+          <!-- 
+          <div class="search-container">
+            <input type="text" class="search-input" id="search-input" placeholder="Search book name...">
+            <button class="search-button" id="search-button">🔍 Search</button>
+          </div>
+          -->
+        </div>
+        <table id="bookTable">
+          <thead>
+            <tr>
+              <th>Roll</th>
+              <th>ISBN</th>
+              <th>Edition</th>
+              <th>Available Copies</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="bookTableBody">
+            <!-- Books will be dynamically added here -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="container">
+        <form id="search">
+            <div class="form-group">
+                <label for="roll">Student Roll</label>
+                <input type="text" id="roll" required>
+            </div>
+            <div class="form-group">
+                <label for="isbn">Book ISBN</label>
+                <input type="text" id="isbn" required>
+            </div>
+            <button type="submit">Search</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll</th>
+                    <th>Book Title</th>
+                    <th>ISBN</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="searchResult">
+                    <!-- Search results will be inserted here -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+        <table class="searchTable" id="searchTable">
+            <thead>
+                <tr>
+                  <th>Roll</th>
+                  <th>ISBN</th>
+                  <th>Edition</th>
+                  <th>Available Copies</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="searchResult2">
+                <tr id="searchResult"></tr>
+                <p id="errorSpace"></p>
+                <!-- Books will be dynamically added here -->
+              </tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header>
+    <h3>RUET online Library</h3>
+    <!-- <a href="/" style="color: aliceblue;">Home</a> -->
+    <button class="profileButton" id="profileButton">Profile</button>
+    <div class="auth-buttons">
+      <p id="User-name"></p>
+     </div>
+  </header>
+    <main>
+      <div class="logo">Library System</div>
+      <p>Manage books, users, and transactions seamlessly.</p>
+          <img src="/assests/ruet_gate.jpg" alt="Library" class="thin-image" />
+    </main>
+    </div>
+ <div>
+  <div class="tableAndForm">
+    <div class="book-list">
+        <div class="tableHeader" id="tableHeader">
+            <h2>Book Inventory</h2>
+            <div class="search-container">
+              <input type="text" class="search-input" id="search-input" placeholder="Search book name...">
+              <button class="search-button" id="search-button">🔍 search</button>
+            </div>
+            </div>
+        <table id="bookTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Edition</th>
+                    <th>Available Copies</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bookTableBody">
+                <!-- Books will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-container">
+        <h2 class="form-title">Add New Book</h2>
+        <form id="bookForm">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input 
+                type="text" 
+                id="title" 
+                name="title" 
+                required
+                minlength="2" 
+                maxlength="50"
+                placeholder="Enter title"
+            >
+            <div class="error-message" id="titleError"></div>
+        </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input 
+                type="text" 
+                id="author" 
+                name="author" 
+                required
+                minlength="2" 
+                maxlength="50"
+                placeholder="Enter author name"
+            >
+            <div class="error-message" id="authorError"></div>
+        </div>
+      
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input 
+                type="text" 
+                id="isbn" 
+                name="isbn" 
+                required
+                pattern="^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$"
+                placeholder="Enter ISBN (10 or 13 digits)"
+            >
+            <div class="error-message" id="isbnError"></div>
+        </div>
+      
+        <div class="form-group">
+            <label for="edition">Edition</label>
+            <input 
+                type="number" 
+                id="edition" 
+                name="edition" 
+                min="1" 
+                max="20"
+                placeholder="Enter book edition"
+            >
+            <div class="error-message" id="editionError"></div>
+        </div>
+      
+        <div class="form-group">
+            <label for="copiesAvailable">Copies Available</label>
+            <input 
+                type="number" 
+                id="copiesAvailable" 
+                name="copiesAvailable" 
+                required
+                min="0" 
+                max="1000"
+                placeholder="Number of copies"
+            >
+            <div class="error-message" id="copiesError"></div>
+        </div>
+
+            <button type="submit" class="btn">Add Book</button>
+        </form>
+    </div>
+</div>
+ 
+  
+  <footer>
+    <p>&copy; 2024 Library Management System. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

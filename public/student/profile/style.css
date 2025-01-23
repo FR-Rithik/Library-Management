@@ -1,0 +1,156 @@
+/* styles.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333333; /* Dark gray text for readability */
+}
+
+/* Container for the profile page */
+.profile-container {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Required for absolute positioning of child elements */
+}
+
+/* Profile header */
+.profile-header {
+    background-color: #0066cc; /* Blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 80px 20px 30px; /* Increased top padding for profile picture */
+    position: relative;
+}
+
+/* Profile picture styling */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 75px); /* Centers the image */
+}
+
+/* User name styling */
+.user-name {
+    margin-top: 20px; /* Adjusted due to increased header padding */
+    font-size: 32px;
+    color: #ffffff; /* White text to contrast with blue background */
+}
+
+/* Profile details section */
+.profile-details {
+    padding: 20px;
+}
+
+.profile-details h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0066cc; /* Matching blue color */
+    font-size: 24px;
+}
+
+/* Styling for the profile information table */
+.profileTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profileTable th,
+.profileTable td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+    font-size: 16px;
+}
+
+.profileTable th {
+    width: 30%;
+    background-color: #e6f0ff; /* Light blue background */
+    font-weight: bold;
+    color: #003366; /* Dark blue text */
+}
+
+.profileTable td {
+    width: 70%;
+    color: #333333;
+}
+
+.profileTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styling for the borrowTable */
+#borrowTable {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+}
+
+/* Table header styling */
+#borrowTable th {
+    background-color: #4CAF50; /* Green background */
+    color: #ffffff;
+    text-align: left;
+    padding: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Table data cell styling */
+#borrowTable td {
+    padding: 12px;
+    border-bottom: 1px solid #dddddd;
+    color: #333333;
+}
+
+/* Alternate row coloring for better readability */
+#borrowTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect on table rows */
+#borrowTable tr:hover {
+    background-color: #e6e6e6;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .profile-container,
+    #borrowTable {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .user-name {
+        font-size: 28px;
+    }
+
+    .profile-details h2 {
+        font-size: 22px;
+    }
+
+    .profileTable th,
+    .profileTable td,
+    #borrowTable th,
+    #borrowTable td {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

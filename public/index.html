@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  
+  <header>
+    <h3>RUET online Library</h3>
+    <div class="auth-buttons">
+      <button onclick="location.href='/auth/index_login.html'">Login</button>
+       <button onclick="location.href='/auth/index_register.html'">Register</button>
+     </div>
+  </header>
+    <main>
+      <div class="logo">Library System</div>
+      <p>Manage books, users, and transactions seamlessly.</p>
+          <img src="/assests/ruet_gate.jpg" alt="Library" class="thin-image" />
+    </main>
+    </div>
+ 
+    <div class="book-list">
+      <div class="tableHeader" id="tableHeader">
+        <h2>Book Inventory</h2>
+        <div class="search-container">
+          <input type="text" class="search-input" id="search-input" placeholder="Search book name...">
+          <button class="search-button" id="search-button">🔍 search</button>
+        </div>
+        
+        
+      </div>
+
+      <table id="bookTable">
+          <thead>
+              <tr>
+                  <th>Title</th>
+                  <th>Author</th>
+                  <th>ISBN</th>
+                  <th>Edition</th>
+                  <th>Available Copies</th>
+                  <!-- <th>Actions</th> -->
+              </tr>
+          </thead>
+          <tbody id="bookTableBody">
+              <!-- Books will be dynamically added here -->
+          </tbody>
+      </table>
+  </div>
+  
+  <footer>
+    <p>&copy; 2024 Library Management System. All rights reserved.</p>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>

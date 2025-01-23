@@ -1,0 +1,218 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  /* Auth buttons */
+.auth-buttons button {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #1abc9c; /* Aqua green */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.auth-buttons button:hover {
+  background-color: #16a085; /* Darker aqua green */
+}
+  /* Top navigation bar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background-color: #502c39;
+    color: #fff;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: #3498db;
+  }
+  
+  /* Header section */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #2c3e50;
+    color: #fff;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  /* Main section */
+  main {
+    display: flex; /* Optional: Centering or layout styles */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .thin-image {
+    width: 70%; /* Set width as needed (e.g., full width) */
+    height: 20rem; /* Explicitly set the height */
+    /* Ensures the image scales and crops nicely */
+  }
+  
+  .nav-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* table Header */
+  .tableHeader{
+    display: flex;
+    background-color: #2980b9;
+    color: #ccc;
+    justify-content: space-between;
+    height: 3rem;
+  }
+
+  /* Container for alignment */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ddd;
+  margin: 20px;
+}
+
+/* Input field styling */
+.search-input {
+  width: 300px; /* Adjust width as needed */
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px 0 0 4px; /* Rounded corners on the left */
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+/* Change border color on focus */
+.search-input:focus {
+  border-color: #007bff;
+}
+
+/* Button styling */
+.search-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #50929d;
+  color: #ddd;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 0 4px 4px 0; /* Rounded corners on the right */
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.search-button:hover {
+  background-color: #000000;
+}
+
+/* Optional: For responsiveness */
+@media (max-width: 600px) {
+  .search-input {
+    width: 200px;
+  }
+}
+
+  
+  .btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+  }
+/* Table Styling */
+#bookTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#bookTable thead {
+  background-color: #55606c;
+  color: white;
+}
+
+#bookTable th, 
+#bookTable td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#bookTable tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#bookTable tbody tr:hover {
+  background-color: #e6e6e6;
+}
+
+/* .search-row{
+  background-color: #2c3950;
+  color: rgb(9, 0, 0);
+} */
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+    width: 100%;
+    bottom: 0;
+  }
+  

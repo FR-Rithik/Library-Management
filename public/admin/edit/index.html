@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Add New Book</h2>
+        <form id="bookForm">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input 
+                type="text" 
+                id="title" 
+                name="title" 
+                required
+                minlength="2" 
+                maxlength="50"
+                placeholder="Enter title"
+            >
+            <div class="error-message" id="titleError"></div>
+        </div>
+          <div class="form-group">
+            <label for="author">Author</label>
+            <input 
+                type="text" 
+                id="author" 
+                name="author" 
+                required
+                minlength="2" 
+                maxlength="50"
+                placeholder="Enter author name"
+            >
+            <div class="error-message" id="authorError"></div>
+        </div>
+      
+        <div class="form-group">
+            <label for="isbn">ISBN</label>
+            <input 
+                type="text" 
+                id="isbn" 
+                name="isbn" 
+                pattern="^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$"
+                placeholder="Enter ISBN (10 or 13 digits)"
+            >
+            <div class="error-message" id="isbnError"></div>
+        </div>
+      
+        <div class="form-group">
+            <label for="edition">Edition</label>
+            <input 
+                type="number" 
+                id="edition" 
+                name="edition" 
+                min="1" 
+                max="20"
+                placeholder="Enter book edition"
+            >
+            <div class="error-message" id="editionError"></div>
+        </div>
+      
+        <div class="form-group">
+            <label for="copiesAvailable">Copies Available</label>
+            <input 
+                type="number" 
+                id="copiesAvailable" 
+                name="copiesAvailable" 
+                required
+                min="0" 
+                max="1000"
+                placeholder="Number of copies"
+            >
+            <div class="error-message" id="copiesError"></div>
+        </div>
+
+            <button type="submit" class="update" id="update">Update</button>
+            <button type="back" class="back" id="back">Back</button>
+            <button type="delete" class="delete" id="delete">Delete</button>
+            
+        </form>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
